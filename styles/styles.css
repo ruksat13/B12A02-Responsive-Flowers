@@ -1,3 +1,5 @@
+/* nav bar */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +10,7 @@ body {
     font-family: sans-serif;
     background-color: #f9fbff;
 }
+
 
 /* Navbar */
 .navbar {
@@ -95,3 +98,222 @@ body {
         font-size: 13px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* 2. Banner */
+
+
+
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    margin: 60px auto 40px;
+    padding-left: 30px;     /* keep left padding */
+    padding-right: 0;       /* remove right padding */
+    gap: 20px;
+    background-color: #f0f4ff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.banner-content {
+    max-width: 600px;
+}
+
+.banner-content h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.banner-content .highlight {
+    color: #e95a08; 
+}
+
+.banner-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 550px;
+}
+
+.banner-image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 0;    
+    box-shadow: none;    
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        max-width: 360px;
+        margin: 40px auto;
+        padding: 0 16px;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .banner-content {
+        order: 2;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .banner-content h2 {
+        font-size: 32px;
+    }
+
+    .banner-content p {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .banner-image {
+        order: 1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-image img {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 3. Plants Section */
+
+
+
+.plants-section {
+  max-width: 1140px;
+  margin: 60px auto 40px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+.plants-section h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+}
+
+.plants-section .highlight {
+  color: #e95a08;
+}
+
+.plants-subtitle {
+  font-size: 16px;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 40px;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plant-card {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  border-radius: 6px;
+}
+
+.plant-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0; 
+  border: none;     
+  box-shadow: none; 
+}
+
+
+.plant-card h3 {
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+
+
+.plant-card {
+  background: transparent; 
+  box-shadow: none;       
+  border: none;           
+  padding: 0;             
+}
+
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #e95a08;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #d04f04;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .plants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .plants-section {
+    padding: 0 16px;
+    margin: 40px auto;
+  }
+}
+
+
+
+
+
+
+/* 4. Plants Lover Section */
+
