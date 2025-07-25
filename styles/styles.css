@@ -415,20 +415,15 @@ body {
 
 /* 5. Join Section */
 
-
 .join-section {
     position: relative;
     width: 100vw;
-    /* Full viewport width */
     left: 50%;
     right: 50%;
     margin-left: -50vw;
-    /* Center full width */
     margin-right: -50vw;
     background: url('../assets/news-letter-bg.png') center center/cover no-repeat;
-
     height: 533px;
-    /* Exact height from Figma */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,7 +433,6 @@ body {
     color: white;
     overflow: hidden;
 }
-
 
 .join-content {
     position: relative;
@@ -486,38 +480,173 @@ body {
     background-color: #cc4a07;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
-    .join-section {
-        height: auto;
-        padding: 40px 16px;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        left: 0;
-        right: 0;
-    }
+  .join-section {
+    height: auto;
+    padding: 40px 16px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-position: center top;
+  }
 
-    .join-form {
-        flex-direction: column;
-    }
+  .join-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 
-    .join-form input[type="email"],
-    .join-form button {
-        width: 100%;
-        border-radius: 4px;
-    }
+  .join-content h2 {
+    font-family: 'Georgia', serif;
+  font-size: 23px; /* updated from 36px */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  }
 
-    .join-form button {
-        margin-top: 10px;
-    }
+  .join-form {
+    flex-direction: row;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .join-form input[type="email"],
+  .join-form button {
+    width: auto;
+    flex-grow: 1;
+    border-radius: 4px;
+  }
+
+  .join-form button {
+    margin-top: 0;
+    flex-grow: 0;
+  }
 }
 
 
 
 
-
-
 /* 6. Footer Section */
+.footer-section {
+  max-width: 1140px;
+  margin: 60px auto 40px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #fff;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.footer-logo {
+  max-width: 280px;
+}
+
+.footer-logo img {
+  max-width: 160px;
+  margin-bottom: 16px;
+}
+
+.footer-logo p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: normal;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 0 20px 0;
+}
 
 
+.footer-links {
+  display: flex;
+  gap: 60px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column a {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #e95a08;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.footer-socials a img {
+  width: 28px;
+  height: 28px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-socials a:hover img {
+  opacity: 0.7;
+}
+
+.footer-menu-left {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #6B7280;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu-left li {
+  margin-bottom: 20px;
+}
+
+.footer-menu-left li:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 16px;
+  }
+
+  .footer-logo {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    align-items: flex-start; /* Changed to left align */
+  }
+
+  .footer-column {
+    gap: 8px;
+    text-align: left; /* Ensure text aligns left */
+  }
+
+  .footer-socials {
+    gap: 20px;
+  }
+}
